@@ -75,8 +75,8 @@ public class FacebookGraphUserService extends AbstractFacebookGraphService imple
         try {
             request = new HttpGet(buildRequestUrl(new String[] {userId,"friends"},userAccessToken));
             HttpResponse response = httpClient.execute(request);
-            if (200 != response.getStatusLine().getStatusCode()) {
-                DataResponse<List<User>> friends = objectMapper.readValue(response.getEntity().getContent(), new TypeReference<List<User>>() {});
+            if (200 == response.getStatusLine().getStatusCode()) {
+                DataResponse<List<User>> friends = objectMapper.readValue(response.getEntity().getContent(), new TypeReference<DataResponse<List<User>>>() {});
                 return friends.getData();
             }
             else {
