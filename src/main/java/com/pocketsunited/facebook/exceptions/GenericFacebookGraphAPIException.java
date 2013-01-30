@@ -3,7 +3,7 @@ package com.pocketsunited.facebook.exceptions;
 /**
  * @author Michael Duergner <michael@pocketsunited.com>
  */
-public class GenericFacebookGraphAPIException extends Exception {
+public class GenericFacebookGraphAPIException extends GenericFacebookException {
 
     public GenericFacebookGraphAPIException() {
     }

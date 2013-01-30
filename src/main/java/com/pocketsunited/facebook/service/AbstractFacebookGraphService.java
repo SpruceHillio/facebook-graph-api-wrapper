@@ -15,29 +15,19 @@ import java.net.URISyntaxException;
 /**
  * @author Michael Duergner <michael@pocketsunited.com>
  */
-public abstract class AbstractFacebookGraphService {
-
-    protected final Logger logger = LoggerFactory.getLogger(getClass());
+public abstract class AbstractFacebookGraphService extends AbstractFacebookService {
 
     protected HttpClient httpClient;
-
-    protected ObjectMapper objectMapper;
 
     public void setHttpClient(HttpClient httpClient) {
         this.httpClient = httpClient;
     }
 
-    public void setObjectMapper(ObjectMapper objectMapper) {
-        this.objectMapper = objectMapper;
-    }
-
     @PostConstruct
     public void postConstruct() {
+        super.postConstruct();
         if (null == httpClient) {
             httpClient = new DefaultHttpClient(new PoolingClientConnectionManager());
-        }
-        if (null == objectMapper) {
-            objectMapper = new ObjectMapper();
         }
     }
 
