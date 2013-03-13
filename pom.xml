@@ -6,7 +6,7 @@
 
     <groupId>com.pocketsunited</groupId>
     <artifactId>facebook-graph-api-wrapper</artifactId>
-    <version>0.0.1-SNAPSHOT</version>
+    <version>0.1.0</version>
     <name>Facebook Graph API Wrapper</name>
     <url>https://github.com/PocketsUnited/facebook-graph-api-wrapper</url>
 
