@@ -1,5 +1,6 @@
 package com.pocketsunited.facebook.service;
 
+import com.pocketsunited.facebook.data.AccessToken;
 import com.pocketsunited.facebook.data.AppRequest;
 import com.pocketsunited.facebook.data.User;
 import com.pocketsunited.facebook.exceptions.GenericFacebookGraphAPIException;
@@ -26,4 +27,8 @@ public interface IFacebookGraphUserService {
     List<AppRequest> readAppRequests(String userId, String userAccessToken) throws GenericFacebookGraphAPIException;
 
     boolean deleteAppRequest(String requestId, String userId, String accessToken) throws GenericFacebookGraphAPIException;
+
+    AccessToken exchangeAccessToken(String userAccessToken) throws GenericFacebookGraphAPIException;
+
+    AccessToken exchangeAccessToken(String userAccessToken, String appId, String applicationSecret) throws GenericFacebookGraphAPIException;
 }
