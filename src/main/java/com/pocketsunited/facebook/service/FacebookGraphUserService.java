@@ -64,8 +64,7 @@ public class FacebookGraphUserService extends AbstractFacebookGraphService imple
             request = new HttpGet(buildRequestUrl(new String[] {userId},userAccessToken));
             HttpResponse response = httpClient.execute(request);
             if (200 == response.getStatusLine().getStatusCode()) {
-                DataResponse<User> user = objectMapper.readValue(response.getEntity().getContent(), new TypeReference<DataResponse<User>>() {});
-                return user.getData();
+                return objectMapper.readValue(response.getEntity().getContent(), new TypeReference<User>() {});
             }
             else {
                 logger.warn("Got status code {} when trying to read User  with ID {} with status line {} and content {}",new Object[] {response.getStatusLine().getStatusCode(),userId,response.getStatusLine(),EntityUtils.toString(response.getEntity())});

@@ -61,7 +61,7 @@ public class FacebookOpenGraphService extends AbstractFacebookGraphService imple
             for (Map.Entry<String,String> entry : openGraphObject.getPostParameters().entrySet()) {
                 data.add(new BasicNameValuePair(entry.getKey(),entry.getValue()));
             }
-            HttpEntity entity = new UrlEncodedFormEntity(data);
+            HttpEntity entity = new UrlEncodedFormEntity(data,"UTF-8");
             System.out.println(EntityUtils.toString(entity));
             request.setEntity(entity);
 
