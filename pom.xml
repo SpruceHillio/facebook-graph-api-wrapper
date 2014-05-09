@@ -2,18 +2,36 @@
 <project xmlns="http://maven.apache.org/POM/4.0.0"
          xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
          xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+
+    <parent>
+        <groupId>org.sonatype.oss</groupId>
+        <artifactId>oss-parent</artifactId>
+        <version>7</version>
+    </parent>
+
     <modelVersion>4.0.0</modelVersion>
 
-    <groupId>com.pocketsunited</groupId>
+    <groupId>io.sprucehill</groupId>
     <artifactId>facebook-graph-api-wrapper</artifactId>
     <version>0.2.0</version>
     <name>Facebook Graph API Wrapper</name>
-    <url>https://github.com/PocketsUnited/facebook-graph-api-wrapper</url>
+    <url>https://github.com/SpruceHillio/facebook-graph-api-wrapper</url>
 
     <organization>
-        <name>Pockets United GmbH</name>
-        <url>https://pocketsunited.com</url>
+        <name>SpruceHill.io GmbH</name>
+        <url>http://sprucehill.io</url>
     </organization>
+
+    <issueManagement>
+        <url>https://github.com/SpruceHillio/facebook-graph-api-wrapper/issues</url>
+        <system>GitHub Issues</system>
+    </issueManagement>
+
+    <scm>
+        <url>https://github.com/SpruceHillio/facebook-graph-api-wrapper.git</url>
+        <connection>scm:git:git://github.com/SpruceHillio/facebook-graph-api-wrapper.git</connection>
+        <developerConnection>scm:git:git://github.com/SpruceHillio/facebook-graph-api-wrapper.git</developerConnection>
+    </scm>
 
     <licenses>
         <license>
@@ -25,9 +43,9 @@
     <developers>
         <developer>
             <name>Michael Duergner</name>
-            <email>michael@pocketsunited.com</email>
-            <organization>Pockets United GmbH</organization>
-            <organizationUrl>https://pocketsunited.com</organizationUrl>
+            <email>michael@sprucehill.io</email>
+            <organization>SpruceHill.io GmbH</organization>
+            <organizationUrl>http://sprucehill.io</organizationUrl>
             <url>https://github.com/duergner</url>
         </developer>
     </developers>
