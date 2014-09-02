@@ -13,7 +13,7 @@
 
     <groupId>io.sprucehill</groupId>
     <artifactId>facebook-graph-api-wrapper</artifactId>
-    <version>0.4.0-SNAPSHOT</version>
+    <version>0.4.0</version>
     <name>Facebook Graph API Wrapper</name>
     <url>https://github.com/SpruceHillio/facebook-graph-api-wrapper</url>
 
